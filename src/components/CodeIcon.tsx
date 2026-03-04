@@ -10,6 +10,7 @@ interface CodeIconProps {
 const CodeIcon: React.FC<CodeIconProps> = ({ tech, size = 24, className = "", theme = "dark" }) => {
   const techLower = tech.toLowerCase();
   const style = { width: `${size}px`, height: `${size}px` };
+  const isDarkTheme = theme === "dark";
   
   // PHP
   if (techLower.includes('php'))
@@ -240,9 +241,14 @@ const CodeIcon: React.FC<CodeIconProps> = ({ tech, size = 24, className = "", th
       </div>
     );
   
-  // Default programming icon (theme-aware if needed for custom icons)
+  // Default programming icon (theme-aware)
   return (
-    <div className={`flex items-center justify-center ${className}`} style={style}>
+    <div
+      className={`flex items-center justify-center rounded-full ${
+        isDarkTheme ? "bg-gray-900 text-white" : "bg-gray-200 text-gray-900"
+      } ${className}`}
+      style={style}
+    >
       <span className="text-lg">💻</span>
     </div>
   );

@@ -13,7 +13,7 @@ interface AnimatedSkill extends Skill {
 }
 
 const Skills: React.FC<SkillsProps> = ({ skills, scrollY = 0, theme = "dark" }) => {
-  const [animatedSkills, setAnimatedSkills] = useState<AnimatedSkill[]>(
+  const [, setAnimatedSkills] = useState<AnimatedSkill[]>(
     skills.map(skill => ({ 
       ...skill, 
       animatedLevel: 0 

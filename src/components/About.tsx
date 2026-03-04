@@ -22,7 +22,6 @@ const About: React.FC<AboutProps> = ({ scrollY = 0, theme = "dark" }) => {
   const borderColor = theme === "dark" ? "border-gray-800" : "border-gray-300";
   const hoverBorderColor = theme === "dark" ? "hover:border-gray-600" : "hover:border-gray-400";
   const iconColor = theme === "dark" ? "text-white" : "text-gray-800";
-  const sectionBg = theme === "dark" ? "bg-gray-900/50" : "bg-gray-100/50";
 
   return (
     <section id="about" className="py-20 relative overflow-hidden">

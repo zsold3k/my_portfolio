@@ -12,7 +12,7 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ projects, scrollY = 0, theme = "dark" }) => {
   const [currentProject, setCurrentProject] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [animationDirection, setAnimationDirection] = useState<'next' | 'prev' | 'shuffle'>('next');
+  const [, setAnimationDirection] = useState<'next' | 'prev' | 'shuffle'>('next');
 
   // Theme-based colors
   const gradientFrom = theme === "dark" ? "from-white" : "from-gray-900";

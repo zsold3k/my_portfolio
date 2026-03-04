@@ -47,8 +47,8 @@ const Header: React.FC<HeaderProps> = ({
 
   const handleResumeClick = () => {
     // Open resume in new tab for viewing
-    const newTab = window.open('./public/Curriculum Vitae (Final).pdf', '_blank');
-    
+    window.open('./public/Curriculum Vitae (Final).pdf', '_blank');
+
     // Optional: You can add some visual feedback or tracking here
     console.log('Resume opened in new tab');
     
